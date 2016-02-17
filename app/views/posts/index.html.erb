@@ -1,7 +1,7 @@
 <% provide(:title, "Dean's Blog") %>
 
 <h1>Hello World</h1>
-
+<%= link_to "New Post", new_post_path %> <br/><br/>
 <% @posts.each do |post| %>
   <%= post.title %> <br/>
   <%= truncate(post.content, length: 40, separator: ' ') %> <br/>
