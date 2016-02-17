@@ -1,0 +1,121 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require normalize-rails
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+ */
+ 
+@import "font-awesome";
+@import 'clearfix';
+@import 'colors';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  color: $dark-color;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.375rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p, li {
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+p, ul {
+  margin: 0 0 1.6em 0;
+}
+
+#main-navication {
+  padding: 2.5em 5%;
+  border-bottom: 2px solid $border-color;
+  .logo {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .85em;
+    letter-spacing: 3px;
+    border: 3px solid $border-color;
+    padding: 1rem;
+    text-decoration: none;
+    color: $dark-color;
+    float: left;
+  }
+  nav {
+    float: right;
+    padding-top: .9rem;
+    a {
+      color: $dark-color;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1em;
+    }
+  }
+}
+
+#main-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2.5em 5%;
+  border-top: 2px solid $border-color;
+  .copyright {
+    float: left;
+    font-size: .9em;
+    margin: 0;
+  }
+  nav {
+    float: right;
+    i {
+      color: $dark-color;
+      margin-left: 1em;
+      padding-top: .2em;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}

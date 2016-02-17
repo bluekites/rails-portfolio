@@ -1,0 +1,39 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'clearfix';
+@import 'colors';
+
+.col-1, .col-2, .col-3 {
+  float: left;
+}
+
+.col-1 {
+  width: 45%;
+  padding: 0 5% 0 2.5%;
+}
+
+.col-2, .col-3 {
+  width: 27.5%;
+  padding: 0 2.5%;
+}
+
+.homepage-content {
+  h2 {
+    margin-top: 3rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+  hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 3px solid $blue;
+    margin: 2rem 0;
+  }
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: .5em;
+  }
+}
