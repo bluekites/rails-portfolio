@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
   
   def index
-    @posts = Post.all
+    @posts = Post.created_descending
   end
   
   def new

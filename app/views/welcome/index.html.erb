@@ -11,12 +11,16 @@
       Coding is my passion. Being well versed in HTML5, CSS3, JavaScript along with a multitude of other languages, I intend on continuing to do what I love and love what I do. 
     </p>
     <p>
-      As a very motivated self-starter, I am very eager to put my programming skills to good use. My current objective is to broaden my horizons and gain experience through a series of projects towards Rails mastery!
+      As a very motivated self-starter, I am incredibly eager to put my programming skills to good use. My current objective is to broaden my horizons and gain experience through a series of projects towards Rails mastery!
     </p>
   </div>
   <div class="col-2 homepage-content">
     <h2>My Current Musings</h2>
     <hr>
+    <% @posts.each do |post| %>
+      <h3><%= link_to post.title, post %></h3>
+      <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+    <% end %>
   </div>
   <div class="col-3 homepage-content">
     <h2>My Recent Projects</h2>

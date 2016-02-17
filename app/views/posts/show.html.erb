@@ -1,5 +1,22 @@
-<%= @post.title %> <br/>
-<%= @post.content %>
+<% provide(:title, @post.title) %>
 
-<%= link_to "Edit", edit_post_path(@post) %>
-<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
+<div id="post-show" class="small-wrapper">
+  <p class="date"><%= @post.created_at.strftime('%A, %B %d') %></p>
+  <h1 class="post"><%= @post.title %></h1> <br/>
+  <hr>
+  <div id="content">
+    <p><%= @post.content %></p>
+  </div>
+  <hr>
+  <div id="share-box">
+    <p>Share <%= @post.title %></p>
+    <!-- code for modal twitter share box -->
+    <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by @deanchuang1 - url = <%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height = 500, top=200, left=300');void(0);">
+      <i class="fa fa-twitter"></i></a>
+    <!-- code for modal fb share box -->
+    <a onclick="javascript:window.open('http://facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+  </div>
+  <hr>
+  <%= link_to "Edit", edit_post_path(@post) %>
+  <%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
+</div>

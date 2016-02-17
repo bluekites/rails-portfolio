@@ -19,22 +19,23 @@
 }
 
 .homepage-content {
-  margin-bottom: 5em;
+  margin-bottom: 6em;
   h2 {
     margin-top: 3rem;
     font-size: 1.1rem;
     text-transform: uppercase;
   }
-  hr {
-    display: block;
-    height: 2px;
-    border: 0;
-    border-top: 3px solid $blue;
-    margin: 2rem 0;
-  }
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: .5em;
+    a {
+      color: $dark-color;
+      text-decoration: none;
+    }
+  }
+  .date {
+    color: $light-color;
+    font-size: .8rem;
   }
 }

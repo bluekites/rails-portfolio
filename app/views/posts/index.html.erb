@@ -1,9 +1,15 @@
 <% provide(:title, "Dean's Blog") %>
 
-<h1>Hello World</h1>
+<h1 id="page-title">Current Musings</h1>
 <%= link_to "New Post", new_post_path %> <br/><br/>
-<% @posts.each do |post| %>
-  <%= post.title %> <br/>
-  <%= truncate(post.content, length: 40, separator: ' ') %> <br/>
-  <%= link_to "Read more", post_path(post) %>
-<% end %>
+
+<div id="posts-wrapper" class="small-wrapper">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <p class="date"><%= post.created_at.strftime('%A, %B %d')%></p>
+      <h2><%= link_to post.title, post_path(post) %></h2> <br/>
+      <%= truncate(post.content, length: 40, separator: ' ') %> <br/>
+      <hr>
+    </div>
+  <% end %>
+</div>
