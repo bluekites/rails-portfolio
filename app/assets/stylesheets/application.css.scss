@@ -24,8 +24,9 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: 'Raleway', sans-serif;
+  height: 100%;
 }
 
 .wrapper {
@@ -70,7 +71,7 @@ p, ul {
   margin: 0 0 1.6em 0;
 }
 
-#main-navication {
+#main-navigation {
   padding: 2.5em 5%;
   border-bottom: 2px solid $border-color;
   .logo {
@@ -97,7 +98,8 @@ p, ul {
 }
 
 #main-footer {
-  position: absolute;
+  position: fixed;
+  background-color: white;
   bottom: 0;
   width: 100%;
   padding: 2.5em 5%;
@@ -119,3 +121,4 @@ p, ul {
     }
   }
 }
+
