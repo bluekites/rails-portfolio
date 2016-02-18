@@ -36,6 +36,7 @@
 
 #post-show {
   text-align: center;
+  margin-bottom: 8em;
   .date {
     margin-top: 2em;
     margin-bottom: 0;
@@ -48,6 +49,9 @@
   hr {
     margin: 2em auto;
     width: 5em;
+  }
+  #content {
+    text-align: left;
   }
 }
 

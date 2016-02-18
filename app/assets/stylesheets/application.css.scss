@@ -77,6 +77,10 @@ p, ul {
   margin: 0 0 1.6em 0;
 }
 
+ul {
+  list-style-position: inside;
+}
+
 hr {
   display: block;
   height: 2px;

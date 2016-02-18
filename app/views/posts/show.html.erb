@@ -5,7 +5,7 @@
   <h1 class="post"><%= @post.title %></h1> <br/>
   <hr>
   <div id="content">
-    <p><%= @post.content %></p>
+    <p><%= markdown(@post.content) %></p>
   </div>
   <hr>
   <div id="share-box">
