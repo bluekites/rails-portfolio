@@ -94,6 +94,12 @@ ul {
   text-align: center;
 }
 
+.notice, .alert {
+  text-align: center;
+  padding: 1em 0;
+  border-bottom: 2px solid $border-color;
+}
+
 hr {
   display: block;
   height: 2px;

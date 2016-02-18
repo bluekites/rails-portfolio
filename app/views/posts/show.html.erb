@@ -8,6 +8,12 @@
     <p><%= markdown(@post.content) %></p>
   </div>
   <hr>
+  <% if user_signed_in? %>
+    <div id="admin-links">
+      <%= link_to "Edit", edit_project_path(@post) %>
+      <%= link_to "Delete", project_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
+    </div>
+  <% end %>
   <div id="share-box">
     <p>Share <%= @post.title %></p>
     <!-- code for modal twitter share box -->
@@ -17,7 +23,5 @@
     <a onclick="javascript:window.open('http://facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
   </div>
   <hr>
-  <%= link_to "Edit", edit_post_path(@post) %>
-  <%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
   <%= render 'disqus' %>
 </div>

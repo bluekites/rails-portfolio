@@ -32,6 +32,22 @@
   }
 }
 
+#admin-links {
+  border-top: 2px solid $border-color;
+  border-bottom: 2px solid $border-color;
+  text-align: center;
+  padding: 1em 0;
+  margin: 1em 0;
+  a {
+    color: $dark-color;
+    margin: 0 1em;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: .7em;
+    text-transform: uppercase;
+  }
+}
+
 // Posts Show
 
 #post-show {
