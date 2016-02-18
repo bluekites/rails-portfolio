@@ -19,6 +19,7 @@ gem 'redcarpet'
 gem 'friendly_id'
 gem 'will_paginate'
 gem 'figaro'
+gem 'devise'
 
 
 group :development, :test do
