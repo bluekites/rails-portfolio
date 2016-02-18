@@ -39,10 +39,12 @@ class PostsController < ApplicationController
   
   private
     def post_params
-      params.require(:post).permit(:title, :content)
+      #Permit slug for friendly id
+      params.require(:post).permit(:title, :content, :slug)
     end
     
     def find_post
-      @post = Post.find(params[:id])
+      #Post.friendly.find makes use of the friendly_id gem
+      @post = Post.friendly.find(params[:id])
     end
 end
