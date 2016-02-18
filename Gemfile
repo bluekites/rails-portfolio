@@ -18,6 +18,7 @@ gem 'pygments.rb'
 gem 'redcarpet'
 gem 'friendly_id'
 gem 'will_paginate'
+gem 'figaro'
 
 
 group :development, :test do
