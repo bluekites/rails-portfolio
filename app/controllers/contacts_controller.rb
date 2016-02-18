@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
       UserMailer.contact_email(@contact).deliver
       redirect_to root_path, notice: "Thank you for your message!"
     else
-      render :new, alert: "Message failed to send." 
+      render :new
     end
   end
   

@@ -2,6 +2,13 @@
 
 <h1 id="page-title">Contact Dean</h1>
 
+<% if @contact.errors.any? %>
+  <h2><%= pluralize(@contact.errors.count, "error") %></h2>
+  <% @contact.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+<% end %>
+
 <div class="contact-form">
   <%= form_for(@contact) do |f| %>
     <%= f.label :name, "Name" %>

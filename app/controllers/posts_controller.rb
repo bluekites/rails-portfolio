@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post, notice: "Sweet you got it bro!"
     else
-      render :new, alert: "Failed"
+      render :new
     end
   end
   
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       redirect_to @post, notice: "Success!"
     else
-      render :edit, alert: "Failed"
+      render :edit
     end
   end
   
