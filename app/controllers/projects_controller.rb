@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :find_project, only: [:edit, :show, :update, :destroy]
   
   def index
-    @projects = Project.created_descending
+    @projects = Project.created_descending.paginate(page: params[:page], per_page: 2)
   end
   
   def new
