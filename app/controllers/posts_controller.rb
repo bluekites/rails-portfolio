@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
   
   def index
-    @posts = Post.created_descending
+    @posts = Post.created_descending.paginate(page: params[:page], per_page: 2)
   end
   
   def new
