@@ -19,7 +19,7 @@
     <hr>
     <% @posts.each do |post| %>
       <h3><%= link_to post.title, post %></h3>
-      <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+      <p class="date"><%= time_formatter(post.created_at) %></p>
     <% end %>
   </div>
   <div class="col-3 homepage-content">
@@ -27,7 +27,7 @@
     <hr>
     <% @projects.each do |project| %>
       <h3><%= link_to project.title, project %></h3>
-      <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+      <p class="date"><%= time_formatter(project.created_at) %></p>
     <% end %>
   </div>
 </div>
