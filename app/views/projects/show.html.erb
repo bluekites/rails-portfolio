@@ -1,0 +1,14 @@
+<% provide(:title, @project.title) %>
+
+<div id="post-show" class="small-wrapper">
+  <p class="date"><%= @project.created_at.strftime('%A, %B %d') %></p>
+  <h1 class="post"><%= @project.title %></h1> <br/>
+  <hr>
+  <div id="content">
+    <p><%= markdown(@project.description) %></p>
+    <div class="button-wrapper">
+      <%= link_to "Visit #{@project.title}", @project.link, class:"project_button", target:"_blank" %> 
+    </div>  
+  </div>
+  <hr>
+</div>
