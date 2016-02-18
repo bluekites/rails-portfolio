@@ -25,7 +25,11 @@ class ProjectsController < ApplicationController
   end
   
   def update
-  
+    if @project.update(project_params)
+      redirect_to project_path(@project), notice: "Success"
+    else
+      render :edit
+    end
   end
 
   def destroy
