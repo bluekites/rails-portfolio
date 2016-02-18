@@ -81,12 +81,7 @@ ul {
   list-style-position: inside;
 }
 
-textarea {
-  min-height: 20em;
-  resize: none;
-}
-
-.project_button {
+.project-button {
   background: $blue;
   color: $cloud;
   text-decoration: none;
@@ -94,7 +89,7 @@ textarea {
 }
 
 .button-wrapper {
-  margin: 3em 0 0 0;
+  margin: 2em 0 1em 0;
   text-align: center;
 }
 
@@ -103,6 +98,7 @@ hr {
   height: 2px;
   border: 0;
   border-top: 3px solid $blue;
+  width: 15em;
   margin: 2rem 0;
 }
 

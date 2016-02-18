@@ -2,21 +2,22 @@
 
 <h1 id="page-title">Contact Dean</h1>
 
-<% if @contact.errors.any? %>
-  <h2><%= pluralize(@contact.errors.count, "error") %></h2>
-  <% @contact.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
+<div class="form-wrapper">
+  <% if @contact.errors.any? %>
+    <h2><%= pluralize(@contact.errors.count, "error") %></h2>
+    <% @contact.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
   <% end %>
-<% end %>
-
-<div class="contact-form">
   <%= form_for(@contact) do |f| %>
-    <%= f.label :name, "Name" %>
-    <%= f.text_field :name %><br />
-    <%= f.label :email, "Email" %>
-    <%= f.text_field :email %><br />
-    <%= f.label :content, "Content" %>
-    <%= f.text_area :content %><br />
-    <%= f.submit "Send" %>
+    <%= f.label :name, "Name", class: "form-label" %>
+    <%= f.text_field :name, class: "form-field" %><br />
+    <%= f.label :email, "Email", class: "form-label" %>
+    <%= f.text_field :email, class: "form-field" %><br />
+    <%= f.label :content, "Content", class: "form-label" %>
+    <%= f.text_area :content, class: "form-field" %><br />
+    <div class="button-wrapper">
+      <%= f.submit "Send", class: "submit-button" %>
+    </div>
   <% end %>
 </div>

@@ -1,3 +1,4 @@
+
 <%= form_for @post do |f| %>
   <% if @post.errors.any? %>
     <h2><%= pluralize(@post.errors.count, "error") %></h2>
@@ -6,10 +7,12 @@
     <% end %>
   <% end %>
   
-  <%= f.label :title %><br/>
-  <%= f.text_field :title %> <br/><br/>
-  <%= f.label :content, "Article content" %> <br/>
-  <%= f.text_area :content %> <br />
-  <%= f.submit %>
-  
+  <%= f.label :title, class: "form-label" %>
+  <%= f.text_field :title, class: "form-field" %> <br/>
+  <%= f.label :content, "Article content", class: "form-label" %>
+  <%= f.text_area :content, class: "form-field" %> <br />
+  <div class="button-wrapper">
+    <%= f.submit class: "submit-button" %>
+  </div>
 <% end %>
+
