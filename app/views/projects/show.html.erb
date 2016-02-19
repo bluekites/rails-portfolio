@@ -5,7 +5,7 @@
   <h1 class="post"><%= @project.title %></h1> <br/>
   <hr>
   <div id="content">
-    <p><%= markdown(@project.description) %></p>
+    <p><%= markdown(@project.description) %></p><br/>
     <div class="button-wrapper">
       <%= link_to "Visit #{@project.title}", @project.link, class:"project-button", target:"_blank" %> 
     </div>  
