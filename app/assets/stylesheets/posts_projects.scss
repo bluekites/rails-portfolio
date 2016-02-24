@@ -13,6 +13,9 @@
       margin: 0;
       font-size: 2em;
       text-transform: uppercase;
+      @media (max-width: 480px) {
+        font-size: 1.5em;
+      }
       a {
         text-decoration: none;
         color: $dark-color;
@@ -28,6 +31,9 @@
     }
     hr {
       margin: 3em auto;
+      @media (max-width: 480px) {
+        margin: 1em auto;
+      }
     }
   }
 }
