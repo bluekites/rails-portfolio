@@ -16,7 +16,7 @@
  *= require_self
  */
  
-@import "font-awesome";
+@import "font-awesome.css";
 @import 'clearfix';
 @import 'colors';
 
@@ -83,7 +83,7 @@ p, li {
     font-size: .9rem;
   }
 }
-
+ 
 p, ul {
   margin: 0 0 1.6em 0;
 }
