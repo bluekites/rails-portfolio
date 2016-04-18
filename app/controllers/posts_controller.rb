@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]  #if not signed in it will not allow us to create posts
   
   def index
-    @posts = Post.created_descending.paginate(page: params[:page], per_page: 2)
+    @posts = Post.created_descending.paginate(page: params[:page], per_page: 4)
   end
   
   def new
